@@ -1,5 +1,7 @@
 import logo from './baby-face-icon.svg';
 import './App.css';
+import React, { Component }  from 'react';
+
 
 const tracks = [
   "Sleep-little-one",
@@ -10,12 +12,14 @@ const tracks = [
 ]
 
 function App() {
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="wobble" alt="logo" />
       </header>
-      <section>
+      <section className='section'>
           {tracks.map((track, i) => {
             return <Player key={i} track={track} />
           })}
